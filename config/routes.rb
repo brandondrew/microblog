@@ -2,6 +2,7 @@ Microblog::Application.routes.draw do
 
   root :to => "pages#home"
   get "contact", {:controller => "pages", :action => "contact" }
+  get "about", {:controller => "pages", :action => "about" }
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
