@@ -11,7 +11,7 @@ describe PagesController do
     end
     it "should have the right title" do
       get 'home'
-      response.should have_selector("title", :content=>"Microblog")
+      response.should have_selector("title", :content=>"Home")
     end
     it "should have a non-blank body" do
       get 'home'

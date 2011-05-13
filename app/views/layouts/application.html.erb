@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
   <title><%= @title %></title>
-  <%= stylesheet_link_tag "blueprint/screen", { :media => :screen } %>
-  <%= stylesheet_link_tag "blueprint/print", { :media => :print } %>
+  <%= render 'layouts/stylesheets' %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <%= render 'layouts/header' %>
+    <section class="round">
+      <%= yield %>
+    </section>
+    <%= render 'layouts/footer' %>
+  </div>
 </body>
 </html>
